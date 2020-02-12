@@ -27,4 +27,6 @@ for( let i = 0; i < 2; i++) {
     appData.expences[mustExpence] = howMuch;
 };
 
+// some
+
 alert(appData.moneyData / 30);
