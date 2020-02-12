@@ -21,12 +21,23 @@ let appData = {
 };
 
 for( let i = 0; i < 2; i++) {
-    let = mustExpence = prompt('Введите обязательную статью расходов в этом месяце', ''),
-        howMuch = +prompt('Во сколько обойдется?', '');
+       let mustExpence = prompt('Введите обязательную статью расходов в этом месяце', ''),
+            howMuch = +prompt('Во сколько обойдется?', '');
 
-    appData.expences[mustExpence] = howMuch;
+            
+            if ((typeof(mustExpence) === 'string') && (typeof(mustExpence) != null) && mustExpence != '' && howMuch !== '' 
+            && howMuch !== null && (typeof(howMuch) != null) ) {
+                appData.expences[mustExpence] = howMuch;
+            } else {
+                alert("Данные введены не верно!");
+                i--;
+                mustExpence;
+                howMuch;
+            }
+
+    console.log(appData.expences);
 };
 
-// some
+appData.perDay = appData.moneyData / 30;
 
-alert(appData.moneyData / 30);
+alert(appData.perDay);
