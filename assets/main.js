@@ -26,7 +26,7 @@ for( let i = 0; i < 2; i++) {
 
             
             if ((typeof(mustExpence) === 'string') && (typeof(mustExpence) != null) && mustExpence != '' && howMuch !== '' 
-            && howMuch !== null && (typeof(howMuch) != null) ) {
+            && howMuch !== null && (typeof(howMuch) != null)) {
                 appData.expences[mustExpence] = howMuch;
             } else {
                 alert("Данные введены не верно!");
@@ -41,3 +41,11 @@ for( let i = 0; i < 2; i++) {
 appData.perDay = appData.moneyData / 30;
 
 alert(appData.perDay);
+
+if (appData.perDay < 100) {
+    alert("Вы не богатый человек!");
+} else if (appData.perDay > 500) {
+    alert('Вы богатый человек!');
+} else {
+    alert('Средний достаток!')
+};
