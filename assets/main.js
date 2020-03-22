@@ -87,13 +87,13 @@ let appData = {
             items;
         }
 
-        appData.income.forEach(function(item) {
-            alert("Способы доп. заработка: " + item);
+        appData.income.forEach(function(item, i) {
+            alert("Способы доп. заработка: " + (i+1) + " - " + item);
         });
       
     }
 };
 
 for (let k in appData) {
-    console.log("Наша программа включает в себя данные: " + appData[k]);
+    console.log("Наша программа включает в себя данные: " + k + " - " + appData[k]);
 };
