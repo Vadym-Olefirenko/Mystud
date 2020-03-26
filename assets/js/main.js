@@ -1,6 +1,22 @@
-// 'use strict';
+'use strict';
 
-// let money, time;
+let money, time;
+
+let start = document.getElementById('start'),
+    resTable = document.querySelector('.result-table'),
+    values = resTable.querySelectorAll('[class*="value"]'),
+    expencesItems = document.getElementsByClassName('expenses-item'),
+    acceptBtn1 = document.getElementsByTagName('button')[0],
+    acceptBtn2 = document.getElementsByTagName('button')[1],
+    countBtn = document.getElementsByTagName('button')[2],
+    optionalExpItems = document.querySelectorAll('.optionalexpenses-item'),
+    chooseIncome = document.querySelector('.choose-income'),
+    checkSavingsBtn = document.getElementById('savings'),
+    chooseSum = document.getElementById('sum'),
+    choosePercent = document.getElementById('percent'),
+    yearVal = document.querySelector('.year-value'),
+    monthVal = document.querySelector('.month-value'),
+    dayVal = document.querySelector('.day-value');
 
 // function dayBudjet () {
 //     money = +prompt('Ваш бюджет на месяц', '');
@@ -99,21 +115,4 @@
 // };
 
 
-let start = document.getElementById('start'),
-    resTable = document.querySelector('.result-table'),
-    values = resTable.querySelectorAll('[class*="value"]'),
-    expencesItems = document.getElementsByClassName('expenses-item'),
-    acceptBtn = document.getElementsByTagName('button'),
-    countBtn = document.getElementsByTagName('button'),
-    optionalExpItems = document.querySelectorAll('.optionalexpenses-item'),
-    chooseIncome = document.querySelector('.choose-income'),
-    checkSavingsBtn = document.getElementById('savings'),
-    chooseSum = document.getElementById('sum'),
-    choosePercent = document.getElementById('percent'),
-    yearVal = document.querySelector('.year-value'),
-    monthVal = document.querySelector('.month'),
-    dayVal = document.querySelector('.day');
 
-
-
-console.log(checkSavingsBtn);
