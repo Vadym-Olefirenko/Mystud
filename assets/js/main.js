@@ -68,6 +68,20 @@ let start = document.getElementById('start'),
   
     });
 
+    countBtn.addEventListener('click', function () {
+        appData.perDay = (appData.moneyData / 30).toFixed();
+
+        alert(appData.perDay);
+    
+        if (appData.perDay < 100) {
+            alert("Вы не богатый человек!");
+        } else if (appData.perDay > 500) {
+            alert('Вы богатый человек!');
+        } else {
+            alert('Средний достаток!')
+        };
+    });
+
     
 let appData = {
     moneyData: money,
@@ -80,28 +94,7 @@ let appData = {
     },
     income: [],
     savings: true,
-    chooseOptionalExpences: function () {
-        for ( let i = 0; i < 3; i++) {
-            let optionalAnswer = prompt('Статья необязательных расходов?', '');
     
-            appData.optionalExpences['1'] = optionalAnswer;
-    
-            console.log(appData.optionalExpences);
-        };
-    },
-    detectLevel: function () {
-        appData.perDay = (appData.moneyData / 30).toFixed();
-
-        alert(appData.perDay);
-    
-        if (appData.perDay < 100) {
-            alert("Вы не богатый человек!");
-        } else if (appData.perDay > 500) {
-            alert('Вы богатый человек!');
-        } else {
-            alert('Средний достаток!')
-        };
-    },
     calcSavings: function () {
         if( appData.savings == true) {
             let saves = +prompt('Размер вашего депозита', ''),
